@@ -1,0 +1,51 @@
+h2{
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 40px;
+}
+input{
+    width:300px;
+    height:40px;
+    font-family: cursive;
+    font-size: 20px;
+    border:3px solid black;
+    border-radius: 7px;
+}
+.register{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    font-family: cursive;
+    font-size:20px;
+    font-weight:bold;
+    margin:0 auto;
+    width:80%
+}
+.register label{
+    width:40%;
+    text-align:left;
+    margin-bottom: 10px;
+}
+.submit{
+    font-size:20px;
+    background-size: contain;
+    font-weight:bold;
+    text-decoration: none;
+    color:black;
+    text-align: center;
+    font-family: cursive;
+    padding:10px 10px;
+}
+.img{
+    background-image: url(./bgi.jpg);
+    border-bottom: 5px solid grey;
+    color:black;
+    text-align: center;
+    background-size: cover;
+    padding:20px;
+    margin:-10px;
+    font-family: cursive;
+    font-size: 20px;
+}

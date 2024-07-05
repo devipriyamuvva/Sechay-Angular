@@ -1,0 +1,8 @@
+<app-nav (navClickedButton)="buttonChanged($event)"></app-nav>
+<app-header *ngIf="buttonClicked === ''"></app-header>
+<app-header *ngIf="buttonClicked === 'Home'"></app-header>
+<app-login *ngIf="buttonClicked === 'Login'" ></app-login>
+<app-careers *ngIf="buttonClicked === 'Careers'"></app-careers>
+<app-register *ngIf="buttonClicked === 'Register'"></app-register>
+<br>
+<app-footer></app-footer>

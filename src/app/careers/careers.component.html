@@ -1,0 +1,47 @@
+<section class="img">
+    <h1>Welcome to our careers page !!</h1>
+</section>
+<br><br>
+<div class="search">
+    <span>Search : </span>
+    <!-- <input type="text" (input)="changeVal($event)"> -->
+    <input type="text" [(ngModel)]="val" [ngClass]="{changeBackground : val!=''}">
+    <span *ngIf="val !=''"> You've searched for " {{val}} " </span>
+</div>
+<br><br>
+<div class="openings">CURRENT OPENINGS</div>
+<br>
+<div *ngFor="let x of careers;let i=index">
+    <div class="job">
+        <h3 class="role">{{x.name}}</h3>
+        <button class="more"
+            (click)="onClickMore(i)" *ngIf="buttonClickedIndex1 !== i else hide">Show Details</button>
+        <ng-template #hide>
+            <button class="more"
+            (click)="onClickMore(i)">Hide Details</button>
+        </ng-template>
+        <ul class="desc" *ngIf="buttonClickedIndex1 === i">
+            <b class="d">Job Description </b>
+            <br>
+            {{x.description}}
+            <div class="career-details">
+            <h4>Responsibilities:</h4>
+            <ul>
+            <li *ngFor="let responsibility of x.responsibilities">{{ responsibility }}</li>
+            </ul>
+            <h4>Qualifications:</h4>
+            <ul>
+            <li *ngFor="let qualification of x.qualifications">{{ qualification }}</li>
+            </ul>
+            </div>
+            <br>
+            <div><b class="location">Location :</b> Hyderabad</div>
+            <br><br>
+            <button class="button"
+            (click)="onClickApply(i)" [ngStyle]="{'backgroundColor':buttonClickedIndex2===i ? 'grey': 'initial'}"> Apply Now </button>
+        </ul>
+    </div>
+    <br>
+    <br>
+</div>
+<!-- [ngStyle]="{'backgroundColor':buttonClickedIndex===i ? 'grey': 'initial'}"  -->

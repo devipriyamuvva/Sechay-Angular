@@ -1,0 +1,97 @@
+
+h3{
+    padding:0;
+    font-size: 25px;
+}
+b{
+    margin-left: 125px;
+}
+*{
+    font-family: cursive;
+}
+.button{
+    margin-left:10px;
+    font-size: 20px;
+    display: block;
+    padding:5px;
+    width:200px;
+    text-align:center;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #e0e0e0;
+}
+.role{
+    padding:0
+}
+.job{
+    padding-top:5px;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    border:3px solid rgb(43, 41, 41);
+    border-top: 10px solid rgb(9, 0, 0);
+    /* border-radius: 7px; */
+    width:1000px;
+    margin-left:235px;
+}
+
+.desc{
+    display: flex;
+    flex-direction:column;
+    list-style-type: none;
+    font-family: cursive;
+    font-size:20px
+}
+.more{
+        margin-left:10px;
+        display: block;
+        padding:5px;
+        width:200px;
+        text-align:center;
+        font-weight: bold;
+        font-size: 15px;
+}
+.img{
+    background-image: url(./bgi.jpg);
+    color:black;
+    text-align: center;
+    background-size: cover;
+    padding:20px;
+    margin:-10px;
+    border-bottom: 5px solid grey;
+    font-family: cursive;
+    font-size: 20px;
+}
+.search{
+    text-align: right;
+    font-family: cursive;
+    font-size:20px;
+    font-weight: bold;
+    input{
+        padding:10px;
+        margin-bottom:0px;
+        height:20px;
+        width:250px;
+        border-radius: 10px;
+        border:5px solid black;
+        font-size: 20px;
+        font-family: cursive;
+    }
+}
+.changeBackground{
+    background-color:whitesmoke
+}
+.d{
+    text-align: left;
+    margin-left: 10px;
+}
+.location{
+    text-align: left;
+    margin-left: 10px;
+}
+.openings{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+}

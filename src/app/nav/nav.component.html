@@ -1,0 +1,14 @@
+<nav class="nav">
+    <ul class="list">
+        <li class="title"><h1>{{site}}</h1></li>
+        <li><button (click)="onClickHome()" value="Home" *ngIf="currentPage !== 'Home'">Home</button></li>
+        <li><button (click)="onClickLogin()" *ngIf="currentPage !== 'Login'" >Login</button></li>
+        <li><button (click)="onClickRegister()" *ngIf="currentPage !== 'Register'" >Register</button></li>
+        <!-- <ng-template #services>
+            <button value="Services" *ngIf="currentPage !== 'Services'">Services</button>
+        </ng-template> -->
+        <li><button (click)="onClickCareers()" *ngIf="currentPage !== 'Careers'">Careers</button></li>
+        <li><button (click)="onClickBlog()" *ngIf="currentPage !== 'Blogs'">Blogs</button></li>
+    </ul>
+</nav>
+<br>
