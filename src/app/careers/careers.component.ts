@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-careers',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,RouterModule],
   templateUrl: './careers.component.html',
   styleUrl: './careers.component.css'
 })
@@ -113,22 +114,26 @@ export class CareersComponent {
       this.buttonClickedIndex2 = index;
   }
 
-  val="";
-  changeVal(eventVal:Event){
-    this.val=(<HTMLInputElement>eventVal.target).value;
-  }
+  // apply:any;
 
+  val="";
+  // changeVal(eventVal:Event){
+  //   this.val=(<HTMLInputElement>eventVal.target).value;
+  // }
   filteredCareers() {
     if (this.val === '') {
-        return this.careers;
+      return this.careers;
     } else {
       let filteredCareers = [];
       for(let i=0;i<this.careers.length;i++){
-        if(this.careers[i].name.toLowerCase().includes(this.val)){
+        if(this.careers[i].name.toLowerCase().includes(this.val.toLowerCase())){
           filteredCareers.push(this.careers[i]);
         }
-      }
-      return filteredCareers;      
+      } 
+      return filteredCareers;
     }
-}
+  }
+  searchedValue(inputData:string){
+    this.val=inputData;
+  }
 }

@@ -1,14 +1,22 @@
 <nav class="nav">
     <ul class="list">
         <li class="title"><h1>{{site}}</h1></li>
-        <li><button (click)="onClickHome()" value="Home" *ngIf="currentPage !== 'Home'">Home</button></li>
+        
+        <!-- <li><button (click)="onClickHome()" *ngIf="currentPage !== 'Home'">Home</button></li>
         <li><button (click)="onClickLogin()" *ngIf="currentPage !== 'Login'" >Login</button></li>
         <li><button (click)="onClickRegister()" *ngIf="currentPage !== 'Register'" >Register</button></li>
-        <!-- <ng-template #services>
+        <ng-template #services>
             <button value="Services" *ngIf="currentPage !== 'Services'">Services</button>
-        </ng-template> -->
+        </ng-template>
         <li><button (click)="onClickCareers()" *ngIf="currentPage !== 'Careers'">Careers</button></li>
-        <li><button (click)="onClickBlog()" *ngIf="currentPage !== 'Blog'">Blogs</button></li>
+        <li><button (click)="onClickBlog()" *ngIf="currentPage !== 'Blog'">Blogs</button></li> -->
+        <!-- <li><button><a routerLink="Register">Register</a></button></li> -->
+
+        <li><button routerLink="/Home"  routerLinkActive="active">Home</button></li>
+        <li><button routerLink="/Careers" routerLinkActive="active">Careers</button></li>
+        <li><button routerLink="/Blogs" routerLinkActive="active">Blogs</button></li>
+        <li *ngIf="!logged()"><button routerLink="/Login" routerLinkActive="active">Login</button></li>
+        <li *ngIf="logged()"><button (click)="logout()">Logout</button></li>
     </ul>
 </nav>
 <br>

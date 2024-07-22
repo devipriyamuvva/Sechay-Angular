@@ -8,20 +8,23 @@ import { CareersComponent } from '../careers/careers.component';
 import { RegisterComponent } from '../register/register.component';
 import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.component';
 import { BlogsComponent } from '../blogs/blogs.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-container',
   standalone: true,
-  imports: [BlogsComponent,ForgotpasswordComponent,NavComponent,HeaderComponent,FooterComponent,CareersComponent,LoginComponent,CommonModule,RegisterComponent],
+  imports: [RouterOutlet,BlogsComponent,ForgotpasswordComponent,NavComponent,HeaderComponent,FooterComponent,CareersComponent,LoginComponent,CommonModule,RegisterComponent],
   templateUrl: './container.component.html',
   styleUrl: './container.component.css'
 })
 export class ContainerComponent {
   // image="gap.jpg";
 
-  buttonClicked='';
+  // buttonClicked='';
 
-  buttonChanged(eventData: string){
-    this.buttonClicked=eventData;
-  }
+  // buttonChanged(eventData: string){
+  //   this.buttonClicked=eventData;
+  // }
+
+  
 }

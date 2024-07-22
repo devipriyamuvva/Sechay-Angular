@@ -5,28 +5,28 @@
 <br><br>
 
 <div>
-<form class="register">
+<form class="register" >
     <label>Full Name</label>
-    <input id="name" type="text">
-    <div id="nameError" class="error-message"></div>
+    <input id="name" type="text" placeholder="Enter your Full Name">
+    <div id="nameError" class="error-message" ></div>
     <br>
     <label>Email</label>
-    <input id="username" type="email">
+    <input id="username" type="email"  name="username" placeholder="Enter your Email Address" [(ngModel)]="username">
     <div id="usernameError" class="error-message"></div>
     <br>
     <label>Password</label>
-    <input id="password" type="password">
+    <input id="password" type="password"  name="password" placeholder="Enter password" [(ngModel)]="password">
     <div id="pwdError" class="error-message"></div>
     <br>
     <label>Confirm Password</label>
-    <input id="confirm" type="password">
+    <input id="confirm" type="password" placeholder="Re-enter password">
     <div id="conpwdError" class="error-message"></div>
     <br>
     <label>Phone Number</label>
-    <input id="phone" type="tel">
+    <input id="phone" type="tel" placeholder="Enter your Phone Number">
     <div id="phoneError" class="error-message"></div>
     <br>
-    <button type="submit" class="submit">Submit</button>
+    <button type="submit" class="submit" (click)="saveData()">Submit</button>
     <br>
 </form>
 </div>
