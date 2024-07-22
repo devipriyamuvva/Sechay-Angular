@@ -1,0 +1,29 @@
+<section class="img">
+    <h1>Welcome to our blog page !!</h1>
+</section>
+<br><br>
+<div class="container">
+    <div class="sidebar">
+        <h3 style="height: auto;margin-bottom: 0;"><u>Recent Posts</u></h3>
+        <div *ngFor="let post of posts" class="posts">
+            <ul>
+                <li><a href="#" class="p">{{post.name}}</a></li>
+            </ul>
+        </div>
+        <h3 style="height: auto;margin-bottom:0;"><u>Categories</u></h3>
+        <br>
+        <div *ngFor="let category of categories" class="categories">
+            <ul>
+                <li><a href="#" class="p">{{category.name}}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <ul *ngFor="let blog of blogs" class="blogs">
+        <li class="b">
+            <h2>{{blog.name}}</h2>
+            <img [src]="blog.image" style="width:100%;height:275px; border-radius: 10px;">
+            <p class="desc">{{blog.description}}</p>
+        </li>
+    </ul>
+</div>    

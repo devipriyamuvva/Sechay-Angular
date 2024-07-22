@@ -117,4 +117,18 @@ export class CareersComponent {
   changeVal(eventVal:Event){
     this.val=(<HTMLInputElement>eventVal.target).value;
   }
+
+  filteredCareers() {
+    if (this.val === '') {
+        return this.careers;
+    } else {
+      let filteredCareers = [];
+      for(let i=0;i<this.careers.length;i++){
+        if(this.careers[i].name.toLowerCase().includes(this.val)){
+          filteredCareers.push(this.careers[i]);
+        }
+      }
+      return filteredCareers;      
+    }
+}
 }

@@ -11,7 +11,7 @@
 <br><br>
 <div class="openings">CURRENT OPENINGS</div>
 <br>
-<div *ngFor="let x of careers;let i=index">
+<div *ngFor="let x of filteredCareers(); let i=index">
     <div class="job">
         <h3 class="role">{{x.name}}</h3>
         <button class="more"

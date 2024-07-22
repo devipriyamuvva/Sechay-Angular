@@ -6,11 +6,13 @@ import { LoginComponent } from '../login/login.component';
 import { CommonModule } from '@angular/common';
 import { CareersComponent } from '../careers/careers.component';
 import { RegisterComponent } from '../register/register.component';
+import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.component';
+import { BlogsComponent } from '../blogs/blogs.component';
 
 @Component({
   selector: 'app-container',
   standalone: true,
-  imports: [NavComponent,HeaderComponent,FooterComponent,CareersComponent,LoginComponent,CommonModule,RegisterComponent],
+  imports: [BlogsComponent,ForgotpasswordComponent,NavComponent,HeaderComponent,FooterComponent,CareersComponent,LoginComponent,CommonModule,RegisterComponent],
   templateUrl: './container.component.html',
   styleUrl: './container.component.css'
 })
